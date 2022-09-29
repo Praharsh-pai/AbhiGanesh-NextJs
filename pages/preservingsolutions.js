@@ -1,9 +1,12 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import Header from './Components/Header'
+
 const preservingsolutions = () => {
   return (
     <>
+      <Header />
       <div>{/* class="container"*/}
         <div >{/*class="hero flex"*/}
           <div >{/*class="hero-left"*/}
@@ -183,7 +186,7 @@ const preservingsolutions = () => {
         <Link href="/Contact"><a>Contact Us</a></Link>{/*class="contact-fixed-link cta-primary"*/}
       </div>
 
-      <a  href="#goup"><Image height='50' width='50' src="https://abhiganesh.com/assets/goup.svg" alt="go up" /></a>{/*class="go-up"*/}
+      <a href="#goup"><Image height='50' width='50' src="https://abhiganesh.com/assets/goup.svg" alt="go up" /></a>{/*class="go-up"*/}
     </>
   )
 }

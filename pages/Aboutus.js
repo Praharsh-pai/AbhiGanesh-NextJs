@@ -1,9 +1,12 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import Header from './Components/Header'
+
 const Aboutus = () => {
   return (
     <>
+      <Header />
       <div >{/*class="hero container flex"*/}
         <div >{/*class="hero-left"*/}
           <h1>About Us</h1>
@@ -13,18 +16,18 @@ const Aboutus = () => {
           </div>
         </div>
         <div >{/*class="hero-right"*/}
-          <Image height='50' width='50' src="https://abhiganesh.com/assets/about-hero.png" alt="a happy family looking at their laptop and planning for the future"/>
+          <Image height='50' width='50' src="https://abhiganesh.com/assets/about-hero.png" alt="a happy family looking at their laptop and planning for the future" />
         </div>
       </div>
 
       <div >{/*class="container stats-Image height='50' width='50'"*/}
-        <Image height='50' width='50' src="https://abhiganesh.com/assets/statistics.svg" alt="stats show more than 2300 elite portfolios, sip book of over 1.5 crores and 14.7% CAGR"/>
+        <Image height='50' width='50' src="https://abhiganesh.com/assets/statistics.svg" alt="stats show more than 2300 elite portfolios, sip book of over 1.5 crores and 14.7% CAGR" />
       </div>
 
       <div >{/*class="abhi-ganesh-thumbnail"*/}
         <a href="https://www.youtube.com/watch?v=2EKf2x2nbjs">
-          <Image height='50' width='50' src="https://abhiganesh.com/assets/abhi-ganesh-thumbnail.jpg" alt="One of our videos on youtube"/>
-            <p>8 Wheels of Success by Abhijit Sawant</p>
+          <Image height='50' width='50' src="https://abhiganesh.com/assets/abhi-ganesh-thumbnail.jpg" alt="One of our videos on youtube" />
+          <p>8 Wheels of Success by Abhijit Sawant</p>
         </a>
       </div>
 
@@ -39,7 +42,7 @@ const Aboutus = () => {
             <p >We have conducted more than 2300 educational seminars/ lectures and sessions to educate clients on how to invest with proper investment product knowledge and asset allocation.</p>{/*class="solution-info-para"*/}
           </div>
           <div >{/*class="solution-image"*/}
-            <Image height='50' width='50' src="https://abhiganesh.com/assets/our-process.png" alt="getting to know you"/>
+            <Image height='50' width='50' src="https://abhiganesh.com/assets/our-process.png" alt="getting to know you" />
           </div>
         </div>
 
@@ -54,7 +57,7 @@ const Aboutus = () => {
             <Link href="/Questionnaire"><a>Answer a Questionnaire</a></Link>{/*class="cta-primary"*/}
           </div>
           <div >{/*class="solution-image"*/}
-            <Image height='50' width='50' src="https://abhiganesh.com/assets/qustionnaire.png" alt="Questionnaire"/>
+            <Image height='50' width='50' src="https://abhiganesh.com/assets/qustionnaire.png" alt="Questionnaire" />
           </div>
         </div>
       </div>
@@ -64,7 +67,7 @@ const Aboutus = () => {
 
         <div >{/*class="solution flex"*/}
           <div >{/*class="solution-image"*/}
-            <Image height='50' width='50' src="https://abhiganesh.com/assets/our-beliefs.png" alt="our beliefs"/>
+            <Image height='50' width='50' src="https://abhiganesh.com/assets/our-beliefs.png" alt="our beliefs" />
           </div>
           <div >{/*class="solution-info"*/}
             <p >We believe, if your wealth is not invested in proper asset class during your productive 20-25 years people retire with poor retirement Funds leads to low pension.</p>{/*class="solution-info-para"*/}
@@ -87,7 +90,7 @@ const Aboutus = () => {
             <p >We aim to help people to retire early or help to give Financial Freedom at 45.</p>{/*class="solution-info-para"*/}
           </div>
           <div >{/*class="solution-image"*/}
-            <Image height='50' width='50' src="https://abhiganesh.com/assets/our-aims.png" alt="our aims"/>
+            <Image height='50' width='50' src="https://abhiganesh.com/assets/our-aims.png" alt="our aims" />
           </div>
         </div>
 
