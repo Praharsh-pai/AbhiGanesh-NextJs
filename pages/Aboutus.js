@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import Header from './Components/Header'
+import Footer from './Components/Footer'
 
 const Aboutus = () => {
   return (
@@ -106,6 +107,7 @@ const Aboutus = () => {
       <div class="contact-fixed">{/**/}
         <Link href="/Contact"><a>Contact Us</a></Link>{/*class="contact-fixed-link cta-primary"*/}
       </div>
+      <Footer />
     </>
   )
 }

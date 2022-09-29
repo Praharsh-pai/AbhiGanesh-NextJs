@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import Header from './Components/Header'
+import Footer from './Components/Footer'
 
 const preservingsolutions = () => {
   return (
@@ -187,6 +188,7 @@ const preservingsolutions = () => {
       </div>
 
       <a href="#goup"><Image height='50' width='50' src="https://abhiganesh.com/assets/goup.svg" alt="go up" /></a>{/*class="go-up"*/}
+      <Footer />
     </>
   )
 }
