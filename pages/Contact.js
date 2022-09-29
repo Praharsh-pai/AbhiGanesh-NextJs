@@ -13,3 +13,4 @@ const Contact = () => {
 }
 
 export default Contact
+{/*developed by praharsh*/}
