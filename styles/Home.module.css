@@ -1,0 +1,91 @@
+.container{
+    /* background: #000; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.block{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.blockLeft{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 60vh;
+}
+.blockLeft h1{
+    font-size: 70px;
+    margin-bottom: 30px;
+}
+.blockLeft span{
+    color: red;
+}
+.blockLeft p{
+    font-size: 22px;
+}
+
+.blockRight{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60vh;
+}
+.contactbtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    width: 220px !important;
+    color: white !important;
+}
+.mainLink{
+    margin-top: 50px;
+}
+.contactbtn:hover {
+    transition: 0.3s;
+    box-shadow: 0px 0px 2px 2px red;
+}
+.ctaPrimary {
+    text-decoration: none;
+    color: white;
+    background-color: #ff1214;
+    border: 2px solid #ff1214;
+    font-weight: 500;
+    font-size: 1.225rem;
+    padding: .82em 2.73em;
+    transition: box-shadow 500ms;
+}
+.quesbtn{
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    width: 350px !important;
+    color: rgb(255, 0, 0) !important;
+}
+.quesbtn:hover {
+    transition: 0.6s;
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255) !important;
+}
+.fixedconbtn{
+    position: fixed;
+    right: -75px;
+    top: 50%;
+    transform: rotateZ(-90deg);
+}
+@media(max-width:750px){
+    .fixedconbtn{
+        display: none;
+    }
+}

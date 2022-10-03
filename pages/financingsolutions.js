@@ -3,45 +3,48 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Header from './Components/Header'
 import Footer from './Components/Footer'
+import styles from "../styles/financingsoln.module.css"
 
 const financingsolutions = () => {
   return (
     <>
       <Header />
-      <div >{/*class="container"*/}
-        <div >{/*class="hero flex"*/}
-          <div >{/*class="hero-left"*/}
+      <div className={styles.container}>{/*class="container"*/}
+        <div className={styles.hero}>{/*class="hero flex"*/}
+          <div className={styles.heroLeft}>{/*class="hero-left"*/}
             <h1 id="goup">Financing Solutions</h1>
-            <p >Quick Links:</p>{/*class="quick-links-heading"*/}
-            <a href="#home-finance" >{/*class="quick-link"*/}
+            <p className={styles.quickLinkHeading}>Quick Links:</p>{/*class="quick-links-heading"*/}
+            <a className={styles.quickLink} href="#home-finance" >{/*class="quick-link"*/}
               <Image height='50' width='50' src=" https://abhiganesh.com/assets/quicklink.svg" alt="quick-link to go to home finance section" />
               Home Finance
             </a>
-            <a href="#personal-finance" >{/*class="quick-link"*/}
+            <a className={styles.quickLink} href="#personal-finance" >{/*class="quick-link"*/}
               <Image height='50' width='50' src=" https://abhiganesh.com/assets/quicklink.svg" alt="quick-link to go to personal finance section" />
               Personal Finance
             </a>
-            <a href="#real-estate-finance" >{/*class="quick-link"*/}
+            <a className={styles.quickLink} href="#real-estate-finance" >{/*class="quick-link"*/}
               <Image height='50' width='50' src=" https://abhiganesh.com/assets/quicklink.svg" alt="quick-link to go to real estate finance section" />
               Real Estate Finance
             </a>
-            <a href="#loan-against-security" >{/*class="quick-link"*/}
+            <a className={styles.quickLink} href="#loan-against-security" >{/*class="quick-link"*/}
               <Image height='50' width='50' src=" https://abhiganesh.com/assets/quicklink.svg" alt="quick-link to go to loan against security section" />
               Loan Against Security
             </a>
-            <a href="#corporate-finance" >{/*class="quick-link"*/}
+            <a className={styles.quickLink} href="#corporate-finance" >{/*class="quick-link"*/}
               <Image height='50' width='50' src=" https://abhiganesh.com/assets/quicklink.svg" alt="quick-link to go to corporate finance section" />
               Corporate Finance
             </a>
-            <a href="#loan-syndication" >{/*class="quick-link"*/}
+            <a className={styles.quickLink} href="#loan-syndication" >{/*class="quick-link"*/}
               <Image height='50' width='50' src=" https://abhiganesh.com/assets/quicklink.svg" alt="quick-link to go to loan syndication section" />
               Loan Syndication
             </a>
           </div>
-          <div >{/*class="hero-right"*/}
+          <div className={styles.heroRight}>{/*class="hero-right"*/}
             <Image height='50' width='50' src=" https://abhiganesh.com/assets/financing-solutions.png" alt="Financing solutions" />
           </div>
         </div>
+
+
 
         <div id="home-finance">{/*class="solutions"*/}
           <h2>Home Finance</h2>
