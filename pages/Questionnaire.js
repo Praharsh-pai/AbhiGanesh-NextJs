@@ -2,7 +2,7 @@ import React from 'react'
 import Footer from './Components/Footer'
 import Header from './Components/Header'
 import styles from "../styles/questionnaire.module.css"
-
+import Link from 'next/link'
 const Questionnaire = () => {
   const showformtwo = () => {
     const card = document.querySelector(".pop");
@@ -10,17 +10,21 @@ const Questionnaire = () => {
     const mainform = document.querySelector(".mainform");
     mainform.style.display = "none"
   }
-
-
+  const showformthree = () => {
+    const card2 = document.querySelector(".pop2");
+    card2.style.display = "block";
+    const card = document.querySelector(".pop");
+    card.style.display = "none"
+  }
   return (
     <>
       <Header />
-      <div className='container rounded text-center justify-content-center align-items-center' style={{ "flexDirection": "column", "marginBottom": "50px","display":"flex" }}>
+      <div className='container rounded text-center justify-content-center align-items-center' style={{ "flexDirection": "column", "marginBottom": "50px", "display": "flex" }}>
         <h1 className='fw-large' style={{ "fontSize": "70px" }}>Risk Profile Questionnaire</h1>
         <p style={{ "fontSize": "25px", "width": "55%", "fontWeight": "lighter" }}>This questionnaire consists of 10 highly researched questions that will help you understand the type of Investor you are, Aggressive, Moderate or Conservative.</p>
       </div>
 
-      <form className='container rounded mainform' style={{ "width": "1000px", "display":"block" }}>
+      <form className='container rounded mainform' style={{ "width": "70%", "display": "block" }}>
         <div className={styles.question}>
           <p className="question-para">1. In the event of an emergency how much cash savings would you have?</p>
           <div className="form-check">
@@ -197,13 +201,31 @@ const Questionnaire = () => {
 
       </form>
 
-      <div className="pop container rounded text-center justify-content-center align-items-center" style={{ "display": "none","flexDirection": "column"}}>
+      <div className="pop container rounded text-center justify-content-center align-items-center" style={{ "display": "none", "flexDirection": "column", "width": "80%" }}>
         {/* <div >
           <img src="../../../assets/nav/close.svg" alt="close pop up"/>
         </div> */}
         <h2 >Thank You For Answering the Test</h2>
         <p>We will send you your score and the type of Investor you are via your mail and break down how you should go ahead in Investing!!</p>
-
+        <form className='container rounded' style={{ "width": "40%" }}>
+          <label className='form-label' for="name">Name</label> <br />
+          <input className="form-control" type="text" name="name" id="name" /> <br />
+          {/* <span>*Please Enter Your Name</span> <br/> */}
+          <label className='form-label' for="email">Email</label> <br />
+          <input className="form-control" type="email" name="email" id="email" /> <br />
+          {/* <span *ngIf="email.touched && !email.valid">*Please Enter A Valid Email</span> <br/> */}
+          <input type="button" className={`submit form-cta cta-primary`} value="Get Your Results" onClick={showformthree} /> <br/><br/><br/>
+          <Link href="/"><a className={`submit form-cta cta-primary`}>Go to Home Page</a></Link>
+        </form>
+      </div>
+      <div className="pop2 container rounded text-center justify-content-center align-items-center" style={{ "display": "none", "flexDirection": "column", "width": "80%" }}>
+        {/* <div >
+          <img src="../../../assets/nav/close.svg" alt="close pop up"/>
+        </div> */}
+        <h2 class="thanks-pop-header">Thank You For Answering The Questionnaire🎉</h2>
+        <p class="thanks-pop-para">We&apos;ll Send Your Results As Soon As Possible</p>
+        <br/><br/><br/>
+          <Link href="/"><a className={`submit form-cta cta-primary`}>Go to Home Page</a></Link>
       </div>
       <Footer />
     </>

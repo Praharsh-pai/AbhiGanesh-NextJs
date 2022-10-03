@@ -177,3 +177,67 @@
         width: 60%;
    }
 }
+
+.mainCon{
+    margin-left: 300px;
+}
+.blockM{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.block{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+}
+.blockLeft{
+    width: 100%;
+    height: 60vh;
+}
+.blockLeft h1{
+    font-size: 70px;
+    margin-bottom: 30px;
+}
+.blockLeft span{
+    color: red;
+}
+.blockLeft p{
+    font-size: 22px;
+}
+
+.blockRight{
+    width: 100%;
+    height: 60vh;
+}
+.fixedconbtn{
+    position: fixed;
+    right: -75px;
+    top: 50%;
+    transform: rotateZ(-90deg);
+}
+.contactbtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    width: 220px !important;
+    color: white !important;
+}
+.contactbtn:hover {
+    transition: 0.3s;
+    box-shadow: 0px 0px 2px 2px red;
+}
+.ctaPrimary {
+    text-decoration: none;
+    color: white;
+    background-color: #ff1214;
+    border: 2px solid #ff1214;
+    font-weight: 500;
+    font-size: 1.225rem;
+    padding: .82em 2.73em;
+    transition: box-shadow 500ms;
+}
