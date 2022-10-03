@@ -27,11 +27,11 @@ const Header = () => {
                                 <li className="nav-item">
                                     <Link href="/Aboutus"><a className='nav-link' style={{ "width": "105px" }}>About Us</a></Link>
                                 </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <li className="nav-item dropdown">
+                                    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         Solutions
                                     </a>
-                                    <ul id='show' class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <ul id='show' className="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <li><Link className="dropdown-item" href="/preservingsolutions"><a className='nav-link'>Preserving</a></Link></li>
                                         <li><Link className="dropdown-item" href="/financingsolutions"><a className='nav-link'>Financing</a></Link></li>
                                         <li><Link className="dropdown-item" href="/investingsolutions"><a className='nav-link'>Investing</a></Link></li>

@@ -190,7 +190,7 @@ const Questionnaire = () => {
           </div>
           <div className="form-check">
             <input className="form-check-input" type="radio" name="risk" id="risk3" value="6" />
-            <label className="form-check-label" htmlhtmlFor="risk3">High risk/return</label>
+            <label className="form-check-label" htmlFor="risk3">High risk/return</label>
           </div>
         </div>
 
@@ -208,10 +208,10 @@ const Questionnaire = () => {
         <h2 >Thank You For Answering the Test</h2>
         <p>We will send you your score and the type of Investor you are via your mail and break down how you should go ahead in Investing!!</p>
         <form className='container rounded' style={{ "width": "40%" }}>
-          <label className='form-label' for="name">Name</label> <br />
+          <label className='form-label' htmlFor="name">Name</label> <br />
           <input className="form-control" type="text" name="name" id="name" /> <br />
           {/* <span>*Please Enter Your Name</span> <br/> */}
-          <label className='form-label' for="email">Email</label> <br />
+          <label className='form-label' htmlFor="email">Email</label> <br />
           <input className="form-control" type="email" name="email" id="email" /> <br />
           {/* <span *ngIf="email.touched && !email.valid">*Please Enter A Valid Email</span> <br/> */}
           <input type="button" className={`submit form-cta cta-primary`} value="Get Your Results" onClick={showformthree} /> <br/><br/><br/>
@@ -222,8 +222,8 @@ const Questionnaire = () => {
         {/* <div >
           <img src="../../../assets/nav/close.svg" alt="close pop up"/>
         </div> */}
-        <h2 class="thanks-pop-header">Thank You For Answering The Questionnaire🎉</h2>
-        <p class="thanks-pop-para">We&apos;ll Send Your Results As Soon As Possible</p>
+        <h2 className="thanks-pop-header">Thank You For Answering The Questionnaire🎉</h2>
+        <p className="thanks-pop-para">We&apos;ll Send Your Results As Soon As Possible</p>
         <br/><br/><br/>
           <Link href="/"><a className={`submit form-cta cta-primary`}>Go to Home Page</a></Link>
       </div>
