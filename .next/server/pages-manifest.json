@@ -3,6 +3,6 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/Questionnaire": "pages/Questionnaire.js",
-  "/Aboutus": "pages/Aboutus.js",
-  "/": "pages/index.js"
+  "/": "pages/index.js",
+  "/financingsolutions": "pages/financingsolutions.js"
 }
