@@ -3,7 +3,7 @@ const mail = require("./mail");
 exports.handler = async (event, context, callback)=> {
 try {
   let data = JSON.parse(event.body);
-  let transporter = await mail.configure("smtp.example.com", "dementor1901@gmail.com", "pAi199119#");
+  let transporter = await mail.configure("sh024.webhostingservices.com", "inquiry@abhiganesh.com", "@bhiganesh@123");
   let response2 = await mail.sendMail(transporter,
     "inquiry@abhiganesh.com",
     data.email,
@@ -12,8 +12,8 @@ try {
       );
 
   let response1 = await mail.sendMail(transporter,
-     "dementor1901@gmail.com",
-     "dementor1901@gmail.com",
+     "inquiry@abhiganesh.com",
+     "inquiry@abhiganesh.com",
       "Investor questionnaire results",
        `Hi!
        The following person has answered the questionnaire.

@@ -2,8 +2,8 @@ const mail = require("./mail");
 
 exports.handler = async (event, context, callback)=> {
 try {
-  let transporter = await mail.configure("smtp.example.com", "dementor1901@gmail.com", "pAi199119#");
-  let response = await mail.sendMail(transporter, "dementor1901@gmail.com", "itzn637@gmail.com", "test mail", "hello");
+  let transporter = await mail.configure("sh024.webhostingservices.com", "inquiry@abhiganesh.com", "@bhiganesh@123");
+  let response = await mail.sendMail(transporter, "inquiry@abhiganesh.com", "aksp89@gmail.com", "test mail", "hello");
   if(response) {
     console.log("Response: ", response);
     callback(null, {
