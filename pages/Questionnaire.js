@@ -1,30 +1,59 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Footer from './Components/Footer'
 import Header from './Components/Header'
 import styles from "../styles/questionnaire.module.css"
 import Link from 'next/link'
+import $ from "jquery"
 const Questionnaire = () => {
+
+
+  const [score, setScore] = useState(0);
   const showformtwo = () => {
-    const card = document.querySelector(".pop");
-    card.style.display = "block";
-    const mainform = document.querySelector(".mainform");
-    mainform.style.display = "none"
+    $(document).ready(function () {
+      if ($("input:radio[name='savings']").is(":checked") && $("input:radio[name='employment']").is(":checked") && $("input:radio[name='income']").is(":checked") && $("input:radio[name='access']").is(":checked") && $("input:radio[name='change']").is(":checked") && $("input:radio[name='invest']").is(":checked") && $("input:radio[name='objective']").is(":checked") && $("input:radio[name='returns']").is(":checked") && $("input:radio[name='time']").is(":checked") && $("input:radio[name='risk']").is(":checked")) {
+        const card = document.querySelector(".pop");
+        card.style.display = "block";
+        const mainform = document.querySelector(".mainform");
+        mainform.style.display = "none"
+      } else {
+        const finishform = document.querySelector(".finishform");
+        finishform.style.display = "block";
+      }
+    });
   }
+
   const showformthree = () => {
-    const card2 = document.querySelector(".pop2");
-    card2.style.display = "block";
-    const card = document.querySelector(".pop");
-    card.style.display = "none"
+    $(document).ready(function () {
+      $('#detailform input').blur(function()
+      {
+          if($('input:text').is(":empty")) {
+            const formname = document.querySelector(".formname");
+            formname.style.display = "block";
+          }
+      });
+
+      // if () {
+      //   const card2 = document.querySelector(".pop2");
+      //   card2.style.display = "block";
+      //   const card = document.querySelector(".pop");
+      //   card.style.display = "none"
+      // }
+    });
+
   }
+
+
+
+
   return (
     <>
       <Header />
-      <div className='container rounded text-center justify-content-center align-items-center' style={{ "flexDirection": "column", "marginBottom": "50px", "display": "flex" }}>
-        <h1 className='fw-large' style={{ "fontSize": "70px" }}>Risk Profile Questionnaire</h1>
-        <p style={{ "fontSize": "25px", "width": "55%", "fontWeight": "lighter" }}>This questionnaire consists of 10 highly researched questions that will help you understand the type of Investor you are, Aggressive, Moderate or Conservative.</p>
-      </div>
 
       <form className='container rounded mainform' style={{ "width": "70%", "display": "block" }}>
+        <div className='container rounded text-center justify-content-center align-items-center' style={{ "flexDirection": "column", "marginBottom": "50px", "display": "flex" }}>
+          <h1 className='fw-large' style={{ "fontSize": "70px" }}>Risk Profile Questionnaire</h1>
+          <p style={{ "fontSize": "25px", "width": "55%", "fontWeight": "lighter" }}>This questionnaire consists of 10 highly researched questions that will help you understand the type of Investor you are, Aggressive, Moderate or Conservative.</p>
+        </div>
         <div className={styles.question}>
           <p className="question-para">1. In the event of an emergency how much cash savings would you have?</p>
           <div className="form-check">
@@ -194,12 +223,15 @@ const Questionnaire = () => {
           </div>
         </div>
 
-        <p className="finish-form" style={{ "display": "none" }}>Oops! it seems you missed some questions. Please make sure to answer all the questions😊</p>
+        <p className="finishform" style={{ "display": "none" }}>Oops! it seems you missed some questions. Please make sure to answer all the questions😊</p>
+
         <div className='container rounded text-center d-flex justify-content-center align-items-center'>
           <input type="button" className={`${styles.question} submit form-cta cta-primary`} value="Submit" onClick={showformtwo} />
         </div>
 
       </form>
+
+
 
       <div className="pop container rounded text-center justify-content-center align-items-center" style={{ "display": "none", "flexDirection": "column", "width": "80%" }}>
         {/* <div >
@@ -207,26 +239,37 @@ const Questionnaire = () => {
         </div> */}
         <h2 >Thank You For Answering the Test</h2>
         <p>We will send you your score and the type of Investor you are via your mail and break down how you should go ahead in Investing!!</p>
-        <form className='container rounded' style={{ "width": "40%" }}>
+        <form className='container rounded detailform' style={{ "width": "40%" }}>
           <label className='form-label' htmlFor="name">Name</label> <br />
-          <input className="form-control" type="text" name="name" id="name" /> <br />
-          {/* <span>*Please Enter Your Name</span> <br/> */}
+          <input className="form-control" type="text" name="name" id="name"/> <br/>
+
+          <span className='formname' style={{ "display": "none"}}>*Please Enter Your Name</span><br/>
+
           <label className='form-label' htmlFor="email">Email</label> <br />
-          <input className="form-control" type="email" name="email" id="email" /> <br />
-          {/* <span *ngIf="email.touched && !email.valid">*Please Enter A Valid Email</span> <br/> */}
-          <input type="button" className={`submit form-cta cta-primary`} value="Get Your Results" onClick={showformthree} /> <br/><br/><br/>
+          <input className="form-control" type="email" name="email" id="email" /> <br/>
+          
+          <span className='formemail' style={{ "display": "none"}}>*Please Enter A Valid Email</span><br/>
+
+          <input type="button" className={`submit form-cta cta-primary`} value="Get Your Results" onClick={showformthree} /> <br /><br /><br />
           <Link href="/"><a className={`submit form-cta cta-primary`}>Go to Home Page</a></Link>
         </form>
       </div>
+
+
+
+
       <div className="pop2 container rounded text-center justify-content-center align-items-center" style={{ "display": "none", "flexDirection": "column", "width": "80%" }}>
         {/* <div >
           <img src="../../../assets/nav/close.svg" alt="close pop up"/>
         </div> */}
         <h2 className="thanks-pop-header">Thank You For Answering The Questionnaire🎉</h2>
         <p className="thanks-pop-para">We&apos;ll Send Your Results As Soon As Possible</p>
-        <br/><br/><br/>
-          <Link href="/"><a className={`submit form-cta cta-primary`}>Go to Home Page</a></Link>
+        <br /><br /><br />
+        <Link href="/"><a className={`submit form-cta cta-primary`}>Go to Home Page</a></Link>
       </div>
+
+
+
       <Footer />
     </>
   )
