@@ -1,6 +1,16 @@
 {
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
+  "/Components/Footer": "pages/Components/Footer.html",
+  "/Aboutus": "pages/Aboutus.html",
+  "/Components/Header": "pages/Components/Header.html",
+  "/Home": "pages/Home.html",
+  "/Contact": "pages/Contact.html",
+  "/Questionnaire": "pages/Questionnaire.html",
+  "/": "pages/index.html",
+  "/investingsolutions": "pages/investingsolutions.html",
+  "/preservingsolutions": "pages/preservingsolutions.html",
+  "/financingsolutions": "pages/financingsolutions.html",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js"
+  "/404": "pages/404.html"
 }
