@@ -1,0 +1,38 @@
+LocalHost error occured today
+
+Deploy failed due to an error in @netlify/plugin-nextjs plugin.
+
+
+Hosting to server issue
+
+1:03:28 AM: Failed to compile.
+1:03:28 AM: ./node_modules/bootstrap/dist/js/bootstrap.js
+1:03:28 AM: Module not found: Can't resolve '@popperjs/core' in '/opt/build/repo/node_modules/bootstrap/dist/js'
+1:03:28 AM: Import trace for requested module:
+1:03:28 AM: ./node_modules/bootstrap/dist/js/bootstrap.js
+1:03:28 AM: > Build failed because of webpack errors
+1:03:28 AM: ​
+1:03:28 AM: ────────────────────────────────────────────────────────────────
+1:03:28 AM:   "build.command" failed                                        
+1:03:28 AM: ────────────────────────────────────────────────────────────────
+1:03:28 AM: ​
+1:03:28 AM:   Error message
+1:03:28 AM:   Command failed with exit code 1: next build (https://ntl.fyi/exit-code-1)
+1:03:28 AM: ​
+1:03:28 AM:   Error location
+1:03:28 AM:   In Build command from Netlify app:
+1:03:28 AM:   next build
+1:03:28 AM: ​
+1:03:28 AM:   Resolved config
+1:03:28 AM:   build:
+1:03:28 AM:     command: next build
+1:03:28 AM:     commandOrigin: ui
+1:03:28 AM:     environment:
+1:03:28 AM:       - NEXT_PRIVATE_TARGET
+1:03:28 AM:     publish: /opt/build/repo/.next
+1:03:28 AM:     publishOrigin: ui
+1:03:28 AM:   functionsDirectory: /opt/build/repo/functions
+1:03:28 AM:   plugins:
+1:03:28 AM:     - inputs: {}
+1:03:28 AM:       origin: ui
+1:03:28 AM:       package: '@netlify/plugin-nextjs'
